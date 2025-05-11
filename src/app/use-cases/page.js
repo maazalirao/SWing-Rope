@@ -24,7 +24,7 @@ export default function UseCases() {
     {
       id: 'coastal',
       title: 'Coastal Regions',
-      description: 'Take advantage of strong and consistent coastal winds with installations that have minimal environmental impact on sensitive coastal ecosystems and don't obstruct ocean views.',
+      description: "Take advantage of strong and consistent coastal winds with installations that have minimal environmental impact on sensitive coastal ecosystems and don't obstruct ocean views.",
       benefits: [
         'Salt-water resistant components',
         'Functions in variable wind speeds',
@@ -48,7 +48,7 @@ export default function UseCases() {
     {
       id: 'offgrid',
       title: 'Off-Grid & Remote Locations',
-      description: 'Bring renewable energy to remote or off-grid locations with a solution that's easy to transport, quick to deploy, and requires minimal maintenance.',
+      description: "Bring renewable energy to remote or off-grid locations with a solution that's easy to transport, quick to deploy, and requires minimal maintenance.",
       benefits: [
         'Compact for easy transportation',
         'Quick installation with minimal equipment',
