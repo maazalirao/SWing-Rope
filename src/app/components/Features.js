@@ -47,28 +47,28 @@ export default function Features() {
   ];
 
   return (
-    <section id="learn-more" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="learn-more" className="py-16 sm:py-20 md:py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 md:mb-16">
           <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium mb-4">
             Our Advantages
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             Revolutionizing Wind Energy
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-gray-600">
+          <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-600">
             Our innovative rope-based technology transforms how we harness wind power, 
             making clean energy more accessible, efficient, and environmentally friendly.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <div 
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 transition-all hover:shadow-xl hover:-translate-y-1 group"
             >
-              <div className="h-48 relative overflow-hidden">
+              <div className="h-40 sm:h-48 relative overflow-hidden">
                 <Image 
                   src={feature.image}
                   alt={feature.title}
@@ -80,7 +80,7 @@ export default function Features() {
                   <h3 className="text-xl font-bold mb-1">{feature.title}</h3>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="bg-emerald-50 p-2 rounded-lg">{feature.icon}</div>
                 </div>
@@ -90,8 +90,8 @@ export default function Features() {
           ))}
         </div>
         
-        <div className="mt-20 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl overflow-hidden shadow-xl">
-          <div className="p-8 md:p-12 flex flex-col md:flex-row items-center relative">
+        <div className="mt-16 md:mt-20 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl overflow-hidden shadow-xl">
+          <div className="p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center relative">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
               <Image 
@@ -103,7 +103,7 @@ export default function Features() {
             </div>
             
             <div className="md:w-1/2 mb-8 md:mb-0 relative z-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
                 Impressive Energy Production Metrics
               </h3>
               <p className="text-emerald-50 mb-6">
@@ -112,22 +112,22 @@ export default function Features() {
               </p>
             </div>
             
-            <div className="md:w-1/2 md:pl-12 relative z-10">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white mb-2">30%</div>
+            <div className="w-full md:w-1/2 md:pl-12 relative z-10">
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
+                <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">30%</div>
                   <p className="text-emerald-50 text-sm">Higher Energy Output</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white mb-2">50%</div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">50%</div>
                   <p className="text-emerald-50 text-sm">Lower Material Usage</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white mb-2">40%</div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">40%</div>
                   <p className="text-emerald-50 text-sm">Reduced Installation Cost</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
-                  <div className="text-4xl font-bold text-white mb-2">25%</div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-lg text-center border border-white/20 hover:bg-white/20 transition-colors">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">25%</div>
                   <p className="text-emerald-50 text-sm">Less Maintenance</p>
                 </div>
               </div>

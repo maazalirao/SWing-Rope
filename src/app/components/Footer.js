@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Footer() {
   const [language, setLanguage] = useState('EN');
@@ -39,19 +40,19 @@ export default function Footer() {
   };
   
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-gray-900 text-white pt-16 sm:pt-20 pb-8 sm:pb-10 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-500"></div>
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-600/20 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-teal-600/20 rounded-full blur-3xl"></div>
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 mb-12 lg:mb-16">
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-                SWingRope
-              </span>
+              <div className="w-40 h-12">
+                <Logo className="w-full h-full" color="#ffffff" altColor="#10b981" />
+              </div>
             </Link>
             <p className="text-gray-400 mb-6">
               Revolutionizing wind energy with our innovative rope-based technology. Clean, efficient, and environmentally friendly.
@@ -80,7 +81,7 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-1 lg:col-span-2 mt-8 sm:mt-0">
             <h3 className="text-lg font-semibold mb-6 border-l-2 border-emerald-500 pl-3">Quick Links</h3>
             <ul className="space-y-4">
               <li>
@@ -116,7 +117,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-1 lg:col-span-2 mt-8 sm:mt-0">
             <h3 className="text-lg font-semibold mb-6 border-l-2 border-emerald-500 pl-3">Resources</h3>
             <ul className="space-y-4">
               <li>
@@ -152,7 +153,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 mt-8 lg:mt-0">
             <h3 className="text-lg font-semibold mb-6 border-l-2 border-emerald-500 pl-3">Newsletter</h3>
             <p className="text-gray-400 mb-4">
               Stay updated with our latest news and developments.
@@ -207,7 +208,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-800 pt-6 sm:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} SWingRope. All rights reserved.

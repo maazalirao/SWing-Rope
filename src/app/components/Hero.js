@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -12,8 +13,8 @@ export default function Hero() {
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
-    const width = canvas.width = window.innerWidth;
-    const height = canvas.height = 600;
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = 600;
     
     class Rope {
       constructor(startX, segments, color, width) {
@@ -114,7 +115,20 @@ export default function Hero() {
     animate();
     
     function handleResize() {
-      canvas.width = window.innerWidth;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = Math.min(600, window.innerHeight * 0.6);
+      
+      // Recreate ropes with adjusted dimensions
+      ropes.forEach((rope, i) => {
+        const colors = [
+          'rgba(52, 211, 153, 0.5)',
+          'rgba(20, 184, 166, 0.4)',
+          'rgba(6, 148, 162, 0.3)',
+          'rgba(56, 178, 172, 0.2)'
+        ];
+        const widths = [5, 4, 3, 2];
+        ropes[i] = new Rope(0, 18, colors[i], widths[i]);
+      });
     }
     
     window.addEventListener('resize', handleResize);
@@ -125,7 +139,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
+    <section className="relative min-h-[600px] lg:min-h-screen flex items-center pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pb-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-900 via-teal-800 to-emerald-800 opacity-90 z-0"></div>
       
@@ -136,6 +150,7 @@ export default function Hero() {
           alt="Abstract Pattern"
           fill
           className="object-cover"
+          priority
         />
       </div>
       
@@ -147,28 +162,32 @@ export default function Hero() {
         height="600"
       />
       
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center">
-        <div className="lg:w-1/2 mb-12 lg:mb-0">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+        <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
+          <div className="mx-auto lg:mx-0 mb-6 relative w-40 h-12 sm:w-52 sm:h-16">
+            <Logo className="w-full h-full" color="#ffffff" altColor="#4ade80" />
+          </div>
+          
           <span className="inline-block px-3 py-1 bg-emerald-400/20 text-emerald-100 backdrop-blur-sm rounded-full text-sm font-medium mb-5 border border-emerald-400/20">
             Innovative Wind Energy
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
             The Future of <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">Wind Energy</span> is Here
           </h1>
-          <p className="text-lg text-emerald-100 mb-8">
+          <p className="text-base sm:text-lg text-emerald-100 mb-8 max-w-xl mx-auto lg:mx-0">
             SWingRope harnesses the power of wind with our revolutionary rope-based technology. 
             Elegant, efficient, and environmentally friendly.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4">
             <a 
               href="/contact" 
-              className="bg-emerald-500 hover:bg-emerald-400 text-emerald-900 font-medium px-8 py-3 rounded-md shadow-lg hover:shadow-xl transition-all"
+              className="bg-emerald-500 hover:bg-emerald-400 text-emerald-900 font-medium px-6 sm:px-8 py-3 rounded-md shadow-lg hover:shadow-xl transition-all"
             >
               Become a Pilot User
             </a>
             <a 
               href="#learn-more" 
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-8 py-3 rounded-md font-medium transition-all"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-6 sm:px-8 py-3 rounded-md font-medium transition-all"
             >
               Learn More
             </a>
@@ -185,8 +204,8 @@ export default function Hero() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-colors">
-                <div className="bg-emerald-500 rounded-full p-4 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 text-white">
+                <div className="bg-emerald-500 rounded-full p-3 sm:p-4 shadow-lg transform transition-transform duration-300 group-hover:scale-110">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8 sm:w-10 sm:h-10 text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
                   </svg>
                 </div>
@@ -195,6 +214,22 @@ export default function Hero() {
             <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm">
               Watch: SWingRope Technology in Action
             </div>
+          </div>
+          
+          <div className="mt-8 hidden md:flex justify-center items-center gap-4 opacity-70">
+            <div className="h-px w-12 bg-emerald-400/50"></div>
+            <p className="text-emerald-100 text-sm">Swipe, Swing, Soar: Harnessing Wind Like Never Before</p>
+            <div className="h-px w-12 bg-emerald-400/50"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 hidden md:block">
+        <div className="flex flex-col items-center">
+          <p className="text-emerald-100 text-sm mb-2">Scroll to Explore</p>
+          <div className="w-6 h-10 border-2 border-emerald-100 rounded-full flex items-start justify-center p-1">
+            <div className="w-1.5 h-3 bg-emerald-100 rounded-full animate-bounce"></div>
           </div>
         </div>
       </div>

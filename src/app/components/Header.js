@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Header() {
   const [language, setLanguage] = useState('EN');
@@ -23,25 +23,23 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 py-4 px-6 ${
+    <header className={`fixed w-full z-50 transition-all duration-300 py-3 px-4 sm:py-4 sm:px-6 ${
       scrolled ? 'bg-white/95 shadow-md backdrop-blur-md' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
-          {/* Logo with Image component */}
-          <div className="relative h-10 w-40">
-            <Image
-              src="https://placehold.co/200x80/1e4b57/FFFFFF?text=SWingRope"
-              alt="SWingRope Logo"
-              fill
-              className="object-contain"
-              priority
+          {/* Custom Logo */}
+          <div className="relative h-9 w-36 sm:h-10 sm:w-40 transition-all duration-300">
+            <Logo 
+              className="w-full h-full" 
+              color={scrolled ? "#1e4b57" : "#ffffff"} 
+              altColor={scrolled ? "#10b981" : "#4ade80"}
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex gap-5 lg:gap-8 items-center">
           <Link href="/" className={`text-sm font-medium ${scrolled ? 'text-gray-700' : 'text-white'} hover:text-emerald-500 transition-colors`}>
             Home
           </Link>
