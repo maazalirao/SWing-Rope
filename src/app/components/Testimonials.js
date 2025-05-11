@@ -91,7 +91,7 @@ export default function Testimonials() {
         <div className="flex md:hidden gap-4 overflow-x-auto pb-4 mb-10 snap-x">
           <div className="snap-center flex-shrink-0 relative h-48 w-72 rounded-xl overflow-hidden">
             <Image 
-              src="https://images.unsplash.com/photo-1589634749863-03b67fa0f16b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+              src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
               alt="Wind energy project"
               fill
               className="object-cover"

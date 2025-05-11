@@ -127,34 +127,6 @@ export default function Features() {
                 Our revolutionary design delivers exceptional performance metrics 
                 compared to traditional wind energy solutions.
               </p>
-              
-              {/* Mobile image gallery */}
-              <div className="flex md:hidden space-x-2 mb-6 overflow-x-auto pb-2 -mx-2 px-2">
-                <div className="flex-shrink-0 w-24 h-24 relative rounded-lg overflow-hidden">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Wind Energy" 
-                    fill 
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-24 h-24 relative rounded-lg overflow-hidden">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1548337138-e87d889cc369?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
-                    alt="Wind Energy" 
-                    fill 
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex-shrink-0 w-24 h-24 relative rounded-lg overflow-hidden">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1589582271712-5d7c4abbad20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                    alt="Wind Energy" 
-                    fill 
-                    className="object-cover"
-                  />
-                </div>
-              </div>
             </div>
             
             <div className="w-full md:w-1/2 md:pl-12 relative z-10">
