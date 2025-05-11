@@ -175,7 +175,7 @@ export default function Hero() {
             The Future of <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">Wind Energy</span> is Here
           </h1>
           <p className="text-base sm:text-lg text-emerald-100 mb-8 max-w-xl mx-auto lg:mx-0">
-            SWing Rope harnesses the power of wind with our revolutionary rope-based technology. 
+            Our revolutionary rope-based technology harnesses the power of wind. 
             Elegant, efficient, and environmentally friendly.
           </p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -242,7 +242,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm">
-              Watch: SWing Rope Technology in Action
+              Watch: Wind Energy Technology in Action
             </div>
           </div>
           
