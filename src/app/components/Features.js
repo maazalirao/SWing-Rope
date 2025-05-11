@@ -11,7 +11,7 @@ export default function Features() {
       ),
       title: 'Innovative Technology',
       description: 'Our patented rope-based design captures wind energy with unprecedented efficiency, allowing for installation in locations where traditional turbines are impractical.',
-      image: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+      image: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2560&q=80'
     },
     {
       icon: (
@@ -21,7 +21,7 @@ export default function Features() {
       ),
       title: 'Environmentally Friendly',
       description: 'With minimal visual impact and lower material usage than conventional turbines, our solution preserves natural landscapes while generating clean energy.',
-      image: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
+      image: 'https://images.unsplash.com/photo-1524252500348-1bb07b83f3be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2560&q=80'
     },
     {
       icon: (
@@ -32,7 +32,7 @@ export default function Features() {
       ),
       title: 'Cost Effective',
       description: 'Lower installation and maintenance costs than traditional wind turbines, resulting in faster ROI and making renewable energy more accessible.',
-      image: 'https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80'
+      image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
     },
     {
       icon: (
@@ -42,7 +42,7 @@ export default function Features() {
       ),
       title: 'Versatile Deployment',
       description: 'Adaptable to various environments, from urban settings to remote locations, with minimal site preparation required.',
-      image: 'https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80'
+      image: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
     },
   ];
 
@@ -60,6 +60,23 @@ export default function Features() {
             Our innovative rope-based technology transforms how we harness wind power, 
             making clean energy more accessible, efficient, and environmentally friendly.
           </p>
+        </div>
+        
+        {/* Mobile hero image for features section */}
+        <div className="md:hidden mb-8">
+          <div className="relative h-60 rounded-xl overflow-hidden shadow-lg">
+            <Image 
+              src="https://images.unsplash.com/photo-1569789010436-421d71a9fc38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+              alt="Wind Energy Technology" 
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="text-xl font-bold mb-1">SWing Rope Technology</h3>
+              <p className="text-sm text-white/80">Redefining wind energy capture</p>
+            </div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -110,6 +127,34 @@ export default function Features() {
                 Our revolutionary design delivers exceptional performance metrics 
                 compared to traditional wind energy solutions.
               </p>
+              
+              {/* Mobile image gallery */}
+              <div className="flex md:hidden space-x-2 mb-6 overflow-x-auto pb-2 -mx-2 px-2">
+                <div className="flex-shrink-0 w-24 h-24 relative rounded-lg overflow-hidden">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                    alt="Wind Energy" 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-24 h-24 relative rounded-lg overflow-hidden">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1548337138-e87d889cc369?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                    alt="Wind Energy" 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-shrink-0 w-24 h-24 relative rounded-lg overflow-hidden">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1589582271712-5d7c4abbad20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                    alt="Wind Energy" 
+                    fill 
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
             
             <div className="w-full md:w-1/2 md:pl-12 relative z-10">

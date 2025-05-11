@@ -175,7 +175,7 @@ export default function Hero() {
             The Future of <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">Wind Energy</span> is Here
           </h1>
           <p className="text-base sm:text-lg text-emerald-100 mb-8 max-w-xl mx-auto lg:mx-0">
-            SWingRope harnesses the power of wind with our revolutionary rope-based technology. 
+            SWing Rope harnesses the power of wind with our revolutionary rope-based technology. 
             Elegant, efficient, and environmentally friendly.
           </p>
           <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -191,6 +191,36 @@ export default function Hero() {
             >
               Learn More
             </a>
+          </div>
+          
+          {/* Mobile-only image gallery */}
+          <div className="mt-8 block lg:hidden">
+            <div className="grid grid-cols-3 gap-2">
+              <div className="rounded-lg overflow-hidden h-24 relative">
+                <Image 
+                  src="https://images.unsplash.com/photo-1569789010436-421d71a9fc38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                  alt="Wind Energy Farm"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden h-24 relative">
+                <Image 
+                  src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="Wind Turbines"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden h-24 relative">
+                <Image 
+                  src="https://images.unsplash.com/photo-1548337138-e87d889cc369?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                  alt="Renewable Energy"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
         
@@ -212,10 +242,40 @@ export default function Hero() {
               </div>
             </div>
             <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm">
-              Watch: SWingRope Technology in Action
+              Watch: SWing Rope Technology in Action
             </div>
           </div>
           
+          {/* Desktop-only image gallery */}
+          <div className="mt-6 hidden lg:block">
+            <div className="grid grid-cols-3 gap-3">
+              <div className="rounded-lg overflow-hidden h-20 relative group">
+                <Image 
+                  src="https://images.unsplash.com/photo-1569789010436-421d71a9fc38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                  alt="Wind Energy Farm"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden h-20 relative group">
+                <Image 
+                  src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="Wind Turbines"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden h-20 relative group">
+                <Image 
+                  src="https://images.unsplash.com/photo-1548337138-e87d889cc369?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                  alt="Renewable Energy"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+
           <div className="mt-8 hidden md:flex justify-center items-center gap-4 opacity-70">
             <div className="h-px w-12 bg-emerald-400/50"></div>
             <p className="text-emerald-100 text-sm">Swipe, Swing, Soar: Harnessing Wind Like Never Before</p>

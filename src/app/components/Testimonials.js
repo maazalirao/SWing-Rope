@@ -9,22 +9,41 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      quote: "SWingRope's innovative approach to wind energy is exactly what the renewable sector needs. Their rope-based technology offers significant advantages in efficiency and deployment flexibility.",
+      quote: "SWing Rope's innovative approach to wind energy is exactly what the renewable sector needs. Their rope-based technology offers significant advantages in efficiency and deployment flexibility.",
       author: "Dr. Anna Schmidt",
       title: "Professor of Renewable Energy, Berlin Technical University",
       image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     },
     {
-      quote: "As an early investor in green technologies, I've seen many innovations come and go. SWingRope's solution stands out for its elegant design, lower material costs, and impressive performance metrics.",
+      quote: "As an early investor in green technologies, I've seen many innovations come and go. SWing Rope's solution stands out for its elegant design, lower material costs, and impressive performance metrics.",
       author: "Martin Weber",
       title: "Green Energy Investor",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     },
     {
-      quote: "The adaptability of SWingRope's technology to various environments makes it a game-changer for communities looking to transition to sustainable energy solutions.",
+      quote: "The adaptability of SWing Rope's technology to various environments makes it a game-changer for communities looking to transition to sustainable energy solutions.",
       author: "Sophia Müller",
       title: "Environmental Policy Consultant",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+    },
+  ];
+  
+  const partners = [
+    {
+      name: "GreenTech Innovation",
+      logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+    },
+    {
+      name: "EcoVentures",
+      logo: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    {
+      name: "RenewableFuture",
+      logo: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+    },
+    {
+      name: "WindForward",
+      logo: "https://images.unsplash.com/photo-1570126646281-5ec88111777f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2041&q=80"
     },
   ];
   
@@ -66,6 +85,49 @@ export default function Testimonials() {
           <p className="max-w-3xl mx-auto text-lg text-gray-600">
             Hear what industry professionals and early supporters are saying about our revolutionary wind energy solution.
           </p>
+        </div>
+        
+        {/* Mobile gallery */}
+        <div className="flex md:hidden gap-4 overflow-x-auto pb-4 mb-10 snap-x">
+          <div className="snap-center flex-shrink-0 relative h-48 w-72 rounded-xl overflow-hidden">
+            <Image 
+              src="https://images.unsplash.com/photo-1589634749863-03b67fa0f16b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+              alt="Wind energy project"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="text-lg font-semibold">Innovative Projects</h3>
+              <p className="text-xs text-white/80">Real-world applications</p>
+            </div>
+          </div>
+          <div className="snap-center flex-shrink-0 relative h-48 w-72 rounded-xl overflow-hidden">
+            <Image 
+              src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+              alt="Green energy"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="text-lg font-semibold">Environmental Impact</h3>
+              <p className="text-xs text-white/80">Sustainable solutions</p>
+            </div>
+          </div>
+          <div className="snap-center flex-shrink-0 relative h-48 w-72 rounded-xl overflow-hidden">
+            <Image 
+              src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Wind power"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="text-lg font-semibold">Wind Technology</h3>
+              <p className="text-xs text-white/80">Next-generation solutions</p>
+            </div>
+          </div>
         </div>
         
         <div className="relative max-w-4xl mx-auto">
@@ -138,6 +200,29 @@ export default function Testimonials() {
             ))}
           </div>
           
+          {/* Mobile navigation buttons */}
+          <div className="flex md:hidden justify-between mt-4">
+            <button 
+              onClick={prevTestimonial}
+              className="bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              aria-label="Previous testimonial"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-gray-700">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            
+            <button 
+              onClick={nextTestimonial}
+              className="bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              aria-label="Next testimonial"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-gray-700">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+          
           <button 
             onClick={prevTestimonial}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white p-3 rounded-full shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 hidden md:flex items-center justify-center group"
@@ -161,20 +246,26 @@ export default function Testimonials() {
         
         <div className="mt-20 text-center">
           <h3 className="text-xl font-semibold mb-10">Trusted By Leading Organizations</h3>
-          <div className="flex flex-wrap justify-center gap-12">
-            {/* Partner logos with Image component */}
-            <div className="relative w-32 h-12 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
-              <Image src="https://placehold.co/160x80/e2e8f0/64748b?text=Partner+1" alt="Partner 1" fill className="object-contain" />
-            </div>
-            <div className="relative w-32 h-12 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
-              <Image src="https://placehold.co/160x80/e2e8f0/64748b?text=Partner+2" alt="Partner 2" fill className="object-contain" />
-            </div>
-            <div className="relative w-32 h-12 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
-              <Image src="https://placehold.co/160x80/e2e8f0/64748b?text=Partner+3" alt="Partner 3" fill className="object-contain" />
-            </div>
-            <div className="relative w-32 h-12 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100">
-              <Image src="https://placehold.co/160x80/e2e8f0/64748b?text=Partner+4" alt="Partner 4" fill className="object-contain" />
-            </div>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+            {/* Partner logos with custom background containers */}
+            {partners.map((partner, index) => (
+              <div 
+                key={index}
+                className="relative w-36 h-20 md:w-40 md:h-24 grayscale hover:grayscale-0 transition-all opacity-80 hover:opacity-100 bg-white p-4 rounded-lg shadow-sm hover:shadow-md"
+              >
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={partner.logo} 
+                    alt={partner.name} 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <div className="absolute inset-0 flex items-end justify-center pb-1">
+                  <span className="text-xs text-gray-500 font-medium">{partner.name}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
